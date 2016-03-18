@@ -1,0 +1,164 @@
+.main-menu {
+	position: relative;
+	min-height: 56px;
+
+	&__button {
+		position: absolute;
+		z-index: 6;
+		right: 0;
+		top: 0;
+		font-size: 0;
+		width: 23px;
+		height: 23px;
+		border: none;
+		background: none;
+		margin: 15px 20px;
+		padding: 0;
+		cursor: pointer;
+
+		&::before {
+			position: absolute;
+			top: 9.5px;
+			left: 0;
+			content: "";
+			width: 23px;
+			height: 4px;
+			background-color: @color-primary;
+			box-shadow: 0 -9px 0 @color-primary, 0 9px 0 @color-primary;
+			transition: all 0.3s ease-in-out 0s;
+
+			.main-menu__button--opened& {
+				box-shadow: 0 0 0 @color-primary, 0 0 0 @color-primary;
+				transform: rotate(45deg);
+				background-color: #fff;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			top: 9.5px;
+			left: 0;
+			content: "";
+			width: 23px;
+			height: 4px;
+			background-color: @color-primary;
+			transition: all 0.3s ease-in-out 0s;
+
+			.main-menu__button--opened& {
+				transform: rotate(135deg);
+				background-color: #fff;
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__list {
+		top: 0;
+		z-index: 5;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background-color: @color-primary;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		box-shadow: 0 -7px 7px -7px #6c96b0 inset;
+
+		display: none;
+
+		&.main-menu__list--opened {
+			display: block;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			border-bottom: 1px solid #678fa8;
+			box-shadow: 0 1px 0 #9ac2db;
+		}
+	}
+
+	&__link {
+		color: #fff;
+		font-weight: bold;
+		text-decoration: none;
+		line-height: 54px;
+		display: block;
+	}
+
+	&__logo {
+		position: absolute;
+		z-index: 4;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.index-promo {
+	min-height: 390px;
+	position: relative;
+	z-index: 2;
+	text-align: left;
+	background: url(../img/bg-back-mobile.jpg) no-repeat center top transparent;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 3;
+		height: 26px;
+		width: 100%;
+		bottom: 1px;
+		background: url(../img/bg-intro-triangle-mobile.svg) bottom center no-repeat transparent;
+		background-size: 105%;
+	}
+
+	&__pick {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+}
+
+.promo {
+	min-height: 160px;
+	position: relative;
+	z-index: 2;
+	text-align: left;
+	background: url(../img/bg-back-mobile.jpg) no-repeat center bottom transparent;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 3;
+		height: 26px;
+		width: 50%;
+		bottom: 0;
+		right: 0;
+		background: linear-gradient(to right bottom, transparent 50%, #fff 50%);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 3;
+		height: 26px;
+		width: 50%;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(to left bottom, transparent 50%, #fff 50%);
+	}
+
+	&__pick {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+}

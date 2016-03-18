@@ -3,36 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sedona | Index</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 	<header class="main-header">
 
 		<nav class="main-menu">
-			<button type="button" class="mein-menu__button mein-menu__button--closed">
+			<button type="button" class="main-menu__button">
 				Открыть меню
 			</button>
-			<ul class="main-menu__list main-menu__list--closed">
+			<ul class="main-menu__list">
 				<li class="main-menu__item">
-					<a class="main-menu__link" href="#">Главная</a>
+					<a class="main-menu__link" href="/">Главная</a>
 				</li>
 				<li class="main-menu__item">
-					<a class="main-menu__link">Фото и видео</a>
+					<a class="main-menu__link" href="/photo.html">Фото и видео</a>
 				</li>
 				<li class="main-menu__item">
-					<a class="main-menu__link" href="#">Форма отзыва</a>
+					<a class="main-menu__link">Форма отзыва</a>
 				</li>
 				<li class="main-menu__item">
 					<a class="main-menu__link" href="#">HTML Academy</a>
 				</li>
 			</ul>
-			<a href="#" class="main-menu__logo">
+			<a href="/" class="main-menu__logo">
 				<img src="img/logo-sedona-mobile.svg" alt="Logo" />
 			</a>
 		</nav>
 
 		<div class="promo">
-			<img class="index-promo__pick" src="img/text-sedona.svg" alt="Promo text" />
+			<img class="promo__pick" src="img/text-sedona.svg" alt="Promo text" />
 		</div>
 
 	</header>
@@ -65,15 +67,20 @@
 			<section class="form__contacts">
 				<h2 class="form__title">Контактная информация:</h2>
 				<label class="form__contacts-label" for="input-phone">Контактный телефон:</label>
-				<input class="form__contacts-input form__contacts-input--phone" id="input-phone" type="text" placeholder="Введите телефон" />
+				<div class="form__contacts-wrap form__contacts-wrap--phone">
+					<input class="form__contacts-input" id="input-phone" type="text" placeholder="Введите телефон" />
+				</div>
 				<label class="form__contacts-label" for="input-mail">Электронная почта:</label>
-				<input class="form__contacts-input form__contacts-input--mail" id="input-mail" type="text" placeholder="Введите e-mail" />
+				<div class="form__contacts-wrap form__contacts-wrap--mail">
+					<input class="form__contacts-input" id="input-mail" type="text" placeholder="Введите e-mail" />
+				</div>
+
 			</section>
 
 			<section class="form__impression">
 				<h2 class="form__title">Ваше общее впечатление:</h2>
 				<div class="form__impression-wrap">
-					<input class="form__impression-input" id="input-positively" name="impression" type="radio" />
+					<input class="form__impression-input" id="input-positively" name="impression" type="radio" checked/>
 					<label class="form__impression-label" for="input-positively">Скорее положительное</label>
 				</div>
 				<div class="form__impression-wrap">
@@ -108,10 +115,11 @@
 
 			<section class="form__message">
 				<h2 class="form__title">Опишите свои эмоции:</h2>
-				<textarea name="form__feedback" id="feedback" cols="30" rows="10" placeholder="Опишите подробно все свои восторни"></textarea>
-			</section>
+				<textarea class="form__feedback" name="form__feedback" id="feedback" placeholder="Опишите подробно все свои восторни"></textarea>
 
-			<button type="submit" class="form__btn btn">Отправить отзыв</button>
+				<button type="submit" class="form__btn btn">Отправить отзыв</button>
+
+			</section>
 
 		</form>
 
@@ -130,17 +138,27 @@
 		</a>
 	</footer>
 
-	<div class="popup">
-		<h3 class="popup__title">Что-то пошло не так!</h3>
-		<p class="popup__desc">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-		<button class="popup__btn btn">Ок</button>
+	<div class="popup popup--closed">
+		<div class="popup__wrap">
+			<h3 class="popup__title">Что-то пошло не так!</h3>
+			<p class="popup__desc">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+		</div>
+		<div class="popup__btn-wrap">
+			<button class="popup__btn btn">Ок</button>
+		</div>
 	</div>
 
-	<div class="popup">
-		<h3 class="popup__title">Ваш отзыв отправлен!</h3>
-		<p class="popup__desc">Проверьте Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-		<button class="popup__btn popup__btn--bad btn">Закрыть окно</button>
+	<div class="popup popup--closed">
+		<div class="popup__wrap">
+			<h3 class="popup__title">Ваш отзыв отправлен!</h3>
+			<p class="popup__desc">Проверьте Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+		</div>
+		<div class="popup__btn-wrap popup__btn-wrap--bad">
+			<button class="popup__btn popup__btn--bad btn">Закрыть окно</button>
+		</div>
 	</div>
+
+	<script src="js/script.js"></script>
 
 </body>
 </html>

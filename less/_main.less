@@ -1,0 +1,72 @@
+@viewport {
+	width: device-width;
+	zoom: 1;
+}
+
+@font-face {
+	font-family: "PT Sans";
+	src: local("fonts/ptsans.woff") format('woff'),
+			 local("fonts/ptsans.woff2") format('woff2'),
+			 url("https://fonts.googleapis.com/css?family=PT+Sans");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "PT Sans";
+	src: local("fonts/ptsansbold.woff") format('woff'),
+			 local("fonts/ptsansbold.woff2") format('woff2'),
+			 url("https://fonts.googleapis.com/css?family=PT+Sans:700");
+	font-style: normal;
+	font-weight: bold;
+}
+
+.clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+::-webkit-input-placeholder {color:#000;}
+::-moz-placeholder          {color:#000;}
+:-moz-placeholder           {color:#000;}
+:-ms-input-placeholder      {color:#000;}
+
+body {
+	background-color: #fff;
+	min-width: @min-width;
+	width: @min-width;
+	margin: 0 auto;
+	font: @font;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+p {
+	color: #333333;
+}
+
+.btn {
+	background-color: @color-primary;
+	border: none;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 0 20px;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 58px;
+	display: block;
+	box-sizing: border-box;
+	font-size: 21px;
+}

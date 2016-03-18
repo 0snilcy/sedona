@@ -1,17 +1,9 @@
 {
-  "name": "47939-sedona",
+  "name": "sedona",
   "version": "0.1.0",
   "private": true,
   "description": "Личный проект «Седона» от HTML Academy",
-  "author": "Юлия Анатольевна Ситдикова",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:htmlacademy-adaptive/47939-sedona.git"
-  },
-  "bugs": {
-    "url": "https://github.com/htmlacademy-adaptive/47939-sedona/issues"
-  },
-  "homepage": "https://github.com/htmlacademy-adaptive/47939-sedona",
+  "author": "Зубов Олег Алексадрович",
   "devDependencies": {
     "autoprefixer": "6.3.3",
     "editorconfig-tools": "0.1.1",

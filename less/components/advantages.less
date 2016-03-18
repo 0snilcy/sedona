@@ -1,0 +1,33 @@
+.advantages {
+	text-align: left;
+	.clearfix;
+
+	&__item {
+		position: relative;
+		margin-left: 70px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			height: 40px;
+			width: 40px;
+			left: -53px;
+			top: -10px;
+		}
+
+		&--life::before {
+			background-size: 100%;
+			background: url(../img/icon-house.svg) no-repeat center center transparent;
+		}
+
+		&--gift::before {
+			background-size: 100%;
+			background: url(../img/icon-gift.svg) no-repeat center center transparent;
+		}
+
+		&--food::before {
+			background-size: 100%;
+			background: url(../img/icon-burger.svg) no-repeat center center transparent;
+		}
+	}
+}

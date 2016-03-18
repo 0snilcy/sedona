@@ -1,0 +1,41 @@
+.features {
+	background-color: @color-primary;
+	color: #fff;
+	position: relative;
+
+	.clearfix();
+
+	&__pick {
+		line-height: 0;
+
+		img {
+			min-height: 260px;
+			object-fit: cover;
+		}
+	}
+
+	&__block {
+		&--mod {
+			padding-top: 20px;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 16px;
+				width: 50%;
+				background: linear-gradient(to right bottom, white 50%, transparent 50%);
+			}
+
+			&::after {
+				left: 0;
+				background: linear-gradient(to left bottom, white 50%, transparent 50%);
+			}
+		}
+
+	}
+}
+
+
