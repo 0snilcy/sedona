@@ -51,7 +51,7 @@
 		&-input {
 			width: 100%;
 			box-sizing: border-box;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 			background-color: #f2f2f2;
 			border: none;
 			font-weight: bold;
@@ -64,6 +64,7 @@
 
 		&-wrap {
 			position: relative;
+			margin-bottom: 20px;
 
 			&::before {
 				content: "";
@@ -80,6 +81,18 @@
 
 			&.form__contacts-wrap--mail::before {
 				background: url(../img/icon-mail.svg) no-repeat center center #e6e6e6;
+			}
+
+			&::after {
+				content: attr(data-error);
+				text-transform: none;
+				color: #ff5c5c;
+				margin-left: 22px;
+				display: none;
+			}
+
+			&--error::after {
+				display: block;
 			}
 		}
 	}
