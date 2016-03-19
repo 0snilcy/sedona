@@ -1,17 +1,21 @@
 .advantages {
 	text-align: left;
+	padding: 20px;
+	padding-bottom: 8px;
+
 	.clearfix;
 
 	&__item {
 		position: relative;
-		margin-left: 70px;
+		margin-left: 50px;
+		margin-bottom: 30px;
 
 		&:before {
 			content: "";
 			position: absolute;
 			height: 40px;
 			width: 40px;
-			left: -53px;
+			left: -50px;
 			top: -10px;
 		}
 
@@ -29,5 +33,13 @@
 			background-size: 100%;
 			background: url(../img/icon-burger.svg) no-repeat center center transparent;
 		}
+	}
+
+	&__title {
+		font-size: 18px;
+	}
+
+	&__desc {
+		line-height: 20px;
 	}
 }

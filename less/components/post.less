@@ -1,14 +1,24 @@
 .post {
 	border-top: 1px solid #e5e5e5;
-	padding: 22px 20px;
+	padding: 22px 20px 16px;
 	text-align: left;
 
 	&:last-of-type {
 		border-bottom: 1px solid #e5e5e5;
 	}
 
+	&:first-of-type {
+		margin-top: 24px;
+	}
+
 	&__author {
 		text-transform: none;
+	}
+
+	&__title {
+		font-size: 14px;
+		margin-top: 8px;
+		margin-bottom: 0px;
 	}
 
 	&__like {
@@ -19,6 +29,7 @@
 		line-height: 24px;
 		position: relative;
 		cursor: pointer;
+		margin-top: 7px;
 
 		&::before {
 			content: "";
