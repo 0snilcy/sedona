@@ -1,0 +1,31 @@
+.post {
+	border-top: 1px solid #e5e5e5;
+	padding: 22px 20px;
+	text-align: left;
+
+	&:last-of-type {
+		border-bottom: 1px solid #e5e5e5;
+	}
+
+	&__author {
+		text-transform: none;
+	}
+
+	&__like {
+		border: none;
+		background-color: transparent;
+		font-weight: bold;
+		padding-left: 37px;
+		line-height: 24px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			height: 20px;
+			width: 22px;
+			background: url(../img/icon-like.svg) no-repeat left center transparent;
+		}
+	}
+}
