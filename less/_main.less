@@ -21,21 +21,7 @@
 	font-weight: bold;
 }
 
-.clearfix {
-	&:before,
-	&:after {
-		content: " ";
-		display: table;
-	}
-	&:after {
-		clear: both;
-	}
-}
-
-::-webkit-input-placeholder {color:#000;}
-::-moz-placeholder          {color:#000;}
-:-moz-placeholder           {color:#000;}
-:-ms-input-placeholder      {color:#000;}
+.placeholder(#ccc);
 
 body {
 	background-color: #fff;
@@ -69,6 +55,16 @@ p {
 		font-size: 18px;
 		line-height: 26px;
 		margin: 18px 10px 27px 10px;
+
+		@media @tablet-media {
+			font-size: 21px;
+		}
+	}
+
+	@media @tablet-media {
+		padding-left: 120px;
+		padding-right: 120px;
+		margin-bottom: 45px;
 	}
 }
 

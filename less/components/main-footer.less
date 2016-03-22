@@ -7,6 +7,15 @@
 		font-weight: bold;
 		font-size: 21px;
 		margin: 35px;
+
+		@media @tablet-media {
+			width: calc(100% / 3);
+			float: left;
+			padding: 36px;
+			margin: 0;
+			box-sizing: border-box;
+			line-height: 48px;
+		}
 	}
 
 	&__develop {
@@ -19,6 +28,24 @@
 		img {
 			margin-left: 10px;
 			vertical-align: middle;
+		}
+
+		@media @tablet-media {
+			width: calc(100% / 3);
+			float: left;
+			padding: 36px;
+			margin: 0;
+			box-sizing: border-box;
+			line-height: 48px;
+		}
+	}
+
+	&__socail {
+		@media @tablet-media {
+			width: calc(100% / 3);
+			float: left;
+			padding: 36px;
+			box-sizing: border-box;
 		}
 	}
 }
@@ -35,17 +62,17 @@
 
 	&--twitter {
 		background: url(../img/icon-twitter.svg) center center no-repeat @color-primary;
-		background-size: 40%;
+		background-size: 18px;
 	}
 
 	&--youtube {
 		background: url(../img/icon-youtube.svg) center center no-repeat @color-primary;
-		background-size: 40%;
+		background-size: 20px;
 	}
 
 	&--facebook {
 		background: url(../img/icon-facebook.svg) center center no-repeat @color-primary;
-		background-size: 30%;
+		background-size: 9px;
 	}
 
 	&:not(:last-child) {

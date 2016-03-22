@@ -5,6 +5,11 @@
 
 	.clearfix;
 
+	@media @tablet-media {
+		text-align: center;
+		padding: 50px 0;;
+	}
+
 	&__item {
 		position: relative;
 		margin-left: 50px;
@@ -17,6 +22,14 @@
 			width: 40px;
 			left: -50px;
 			top: -10px;
+
+			@media @tablet-media {
+				left: 50%;
+				top: 0px;
+				transform: translate(-50%, -100%);
+				width: 75px;
+				height: 75px;
+			}
 		}
 
 		&--life::before {
@@ -33,10 +46,23 @@
 			background-size: 100%;
 			background: url(../img/icon-burger.svg) no-repeat center center transparent;
 		}
+
+		@media @tablet-media {
+			margin: 0;
+			padding: 0 40px;
+			box-sizing: border-box;
+			float: left;
+			width: calc(100% / 3);
+			margin-top: 75px;
+		}
 	}
 
 	&__title {
 		font-size: 18px;
+
+		@media @tablet-media {
+			font-size: 21px;
+		}
 	}
 
 	&__desc {

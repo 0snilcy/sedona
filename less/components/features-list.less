@@ -2,16 +2,26 @@
 	background-color: #eeeeee;
 	padding: 10px 20px;
 
+	@media @tablet-media {
+		padding: 0;
+	}
+
 	.clearfix;
 
 	&__title {
 		font-size: 18px;
 		margin-bottom: 8px;
+
+		@media @tablet-media {
+			margin: 25px 8px 8px;
+			font-size: 21px;
+		}
 	}
 
 	&__desc {
 		margin: 10px 0;
 		line-height: 24px;
+		word-wrap: break-word;
 	}
 
 	&__item {
@@ -21,6 +31,20 @@
 			border-bottom: 1px solid #d6d6d6;
 			margin-bottom: 27px;
 			padding-bottom: 13px;
+		}
+
+		@media @tablet-media {
+			width: calc(100% / 3);
+			float: left;
+			margin: 0;
+			padding: 20px 40px;
+			box-sizing: border-box;
+
+			&:not(:last-child) {
+				border: none;
+				margin: 0;
+				padding: 20px 40px;
+			}
 		}
 	}
 }
