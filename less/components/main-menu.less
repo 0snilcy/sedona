@@ -55,6 +55,10 @@
 		&:focus {
 			outline: none;
 		}
+
+		@media @tablet-media {
+			display: none;
+		}
 	}
 
 	&__list {
@@ -74,12 +78,28 @@
 		&.main-menu__list--opened {
 			display: block;
 		}
+
+		@media @tablet-media {
+			display: block;
+			position: relative;
+			background: transparent;
+			box-shadow: none;
+		}
 	}
 
 	&__item {
 		&:not(:last-child) {
 			border-bottom: 1px solid #678fa8;
 			box-shadow: 0 1px 0 #9ac2db;
+
+			@media @tablet-media {
+				border: none;
+				box-shadow: none;
+
+			&:nth-child(2) .main-menu__link {
+				margin-right: 20%;
+			}
+			}
 		}
 	}
 
@@ -90,6 +110,14 @@
 		line-height: 55px;
 		font-size: 18px;
 		display: block;
+
+		@media @tablet-media {
+			color: #000;
+			font-size: 14px;
+			width: 20%;
+			float: left;
+			line-height: 56px;
+		}
 	}
 
 	&__logo {
@@ -119,12 +147,19 @@
 		background-size: 105%;
 	}
 
+	@media @tablet-media {
+		min-height: 520px;
+	}
+
 	&__pick {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		padding: 0 20px;
 		box-sizing: border-box;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 	}
 }
 
