@@ -14,15 +14,15 @@
 		}
 
 		@media @tablet-media {
-			width: 67%;
+			width: ~"calc((100% / 3) * 2)";
 			float: left;
 		}
 	}
 
 	&__desc {
 		color: #fff;
-		margin: 10px 0;
-		line-height: 24px;
+		margin: 19px 0;
+		line-height: 21px;
 		word-wrap: break-word;
 	}
 
@@ -31,13 +31,17 @@
 		margin-bottom: 6px;
 
 		@media @tablet-media {
-			margin: 25px 8px 8px;
+			margin: 22px 8px 12px;
 			font-size: 21px;
 		}
 	}
 
 	&--mod {
 		margin-top: 20px;
+
+		@media @tablet-media {
+			margin-top: 0;
+		}
 	}
 
 	&__block {
@@ -45,11 +49,11 @@
 		padding-top: 24px;
 
 		@media @tablet-media {
-			width: 33%;
+			width: calc(100% / 3);
 			float: right;
 			box-sizing: border-box;
 			margin: 0;
-			padding: 20px 40px;
+			padding: 25px 40px 20px;
 		}
 
 		&--mod {
@@ -72,7 +76,7 @@
 			}
 
 			@media @tablet-media {
-				padding-top: 24px;
+				padding-top: 25px;
 				float: left;
 
 				&::before, &::after {

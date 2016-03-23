@@ -26,6 +26,10 @@
 
 	&:first-of-type {
 		margin-top: 24px;
+
+		@media @tablet-media {
+			margin-top: 18px;
+		}
 	}
 
 	&__author {
@@ -58,9 +62,11 @@
 			top: 50%;
 			transform: translateY(-50%);
 			margin-top: 0;
+			font-size: 14px;
+			padding-left: 31px;
 
 			.post--main & {
-				right: 20px;
+				right: 15px;
 			}
 		}
 
@@ -76,7 +82,7 @@
 
 	&__info {
 		@media @tablet-media {
-			padding: 20px;
+			padding: 16px 20px;
 			position: relative;
 
 			.clearfix();

@@ -17,6 +17,7 @@
 			width: 100%;
 			border: none;
 			text-align: left;
+			padding: 0;
 		}
 	}
 
@@ -26,6 +27,9 @@
 		font-size: 18px;
 
 		@media @tablet-media {
+			font-size: 21px;
+			margin-bottom: 26px;
+
 			&--hide {
 				display: none;
 			}
@@ -87,10 +91,14 @@
 			.form & {
 				order: 2;
 				width: 50%;
+				padding-top: 25px;
+				padding-left: 57px;
+				padding-right: 0;
 			}
 
 			.form__title {
 				text-align: left;
+				margin-bottom: 57px;
 			}
 		}
 	}
@@ -99,6 +107,10 @@
 	// Contacts Section
 	&__contacts {
 		text-align: left;
+
+		@media @tablet-media {
+			margin-top: 71px;
+		}
 
 		&-label {
 			display: block;
@@ -124,6 +136,10 @@
 
 			&:not(:last-child) {
 				margin-bottom: 13px;
+
+				@media @tablet-media {
+					margin-bottom: 20px;
+				}
 			}
 
 			&::before {
@@ -149,6 +165,12 @@
 				color: #ff5c5c;
 				margin-left: 22px;
 				display: none;
+
+				@media @tablet-media {
+					position: absolute;
+					right: 0;
+					top: -30px;
+				}
 			}
 
 			&--error::after {
@@ -179,10 +201,22 @@
 				border-radius: 50%;
 				left: -19px;
 			}
+
+			@media @tablet-media {
+				padding-left: 76px;
+
+				&::before {
+					left: 0;
+				}
+			}
 		}
 
 		&-wrap:not(:last-child) {
 			margin-bottom: 12px;
+
+			@media @tablet-media {
+				margin-bottom: 22px;
+			}
 		}
 
 		&-input {
@@ -198,10 +232,12 @@
 				order: 1;
 				width: 50%;
 				border-right: 1px solid #dbdbdb;
+				padding: 24px 0 0 0;
 			}
 
 			.form__title {
 				text-align: left;
+				margin-bottom: 59px;
 			}
 		}
 	}
@@ -212,6 +248,7 @@
 
 		@media @tablet-media {
 			font-size: 0;
+			margin-top: 49px;
 		}
 
 		&-wrap {
@@ -219,17 +256,24 @@
 
 			&:not(:last-child) {
 				margin-bottom: 24px;
-			}
-				@media @tablet-media {
-					display: inline-block;
-					width:50%;
-					padding-left: 30px;
-					box-sizing: border-box;
 
-					&:nth-child(even) {
-						padding-left: 90px;
-					}
+				@media @tablet-media {
+					margin-bottom: 0;
 				}
+			}
+
+			@media @tablet-media {
+				display: inline-block;
+				width:50%;
+				padding-left: 30px;
+				box-sizing: border-box;
+				padding-top: 17px;
+				padding-bottom: 15px;
+
+				&:nth-child(even) {
+					padding-left: 95px;
+				}
+			}
 		}
 
 		&-label {
@@ -274,6 +318,20 @@
 		box-sizing: border-box;
 		font-size: 18px;
 		font-weight: bold;
+
+		@media @tablet-media {
+			margin-top: 30px;
+		}
+
+	}
+
+	@media @tablet-media {
+		&__message {
+			margin-top: 55px;
+			margin-bottom: 50px;
+
+			.clearfix();
+		}
 	}
 
 
@@ -287,6 +345,7 @@
 		@media @tablet-media {
 			width: 50%;
 			float: left;
+			margin-top: 53px;
 		}
 	}
 
@@ -298,7 +357,7 @@
 			width: 50%;
 			float: right;
 			text-align: right;
-			margin-top: 60px;
+			margin-top: 73px;
 		}
 	}
 }
