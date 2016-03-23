@@ -28,7 +28,7 @@
 					<a class="main-menu__link" href="#">HTML Academy</a>
 				</li>
 			</ul>
-			<a href="#" class="main-menu__logo">
+			<a href="/" class="main-menu__logo">
 				<picture>
 					<source
 						media="(min-width: 768px)"
@@ -54,7 +54,7 @@
 		<form action="#" method="get" class="form">
 
 			<section class="form__name">
-				<h2 class="form__title">Представьтесь, пожалуйста:</h2>
+				<h2 class="form__title">Представьтесь<span class="form__title--hide">, пожалуйста</span>:</h2>
 				<div class="form__name-wrap">
 					<label class="form__name-label" for="input-name">Имя:</label>
 					<input class="form__name-input" id="input-name" type="text" placeholder="Петр" />
@@ -70,7 +70,7 @@
 			</section>
 
 			<section class="form__contacts">
-				<h2 class="form__title">Контактная информация:</h2>
+				<h2 class="form__title form__title--bg-line">Контактная информация:</h2>
 				<label class="form__contacts-label" for="input-phone">Контактный телефон:</label>
 				<div class="form__contacts-wrap form__contacts-wrap--phone" data-error="Ошибка, перепроверьте номер">
 					<input
@@ -109,7 +109,7 @@
 			</section>
 
 			<section class="form__place">
-				<h2 class="form__title">Посещенные достопримечательности:</h2>
+				<h2 class="form__title form__title--bg-line">Посещенные достопримечательности:</h2>
 				<div class="form__place-wrap">
 					<input class="form__place-input" id="input-bridge" name="bridge" type="checkbox" checked/>
 					<label class="form__place-label" for="input-bridge">Мост Дьявола</label>
@@ -129,10 +129,11 @@
 			</section>
 
 			<section class="form__message">
-				<h2 class="form__title">Опишите свои эмоции:</h2>
+				<h2 class="form__title form__title--bg-line">Опишите свои эмоции:</h2>
 				<textarea class="form__feedback" name="form__feedback" id="feedback" placeholder="Опишите подробно все свои восторни"></textarea>
 
 				<button type="submit" class="form__btn btn">Отправить отзыв</button>
+				<div class="form__text-requared">* — обязательные поля</div>
 
 			</section>
 

@@ -3,6 +3,10 @@
 
 	.clearfix;
 
+	@media @tablet-media {
+		padding: 0 60px;
+	}
+
 	&__hashtag {
 		font-weight: bold;
 		font-size: 21px;
@@ -11,7 +15,8 @@
 		@media @tablet-media {
 			width: calc(100% / 3);
 			float: left;
-			padding: 36px;
+			text-align: left;
+			padding: 36px 0;
 			margin: 0;
 			box-sizing: border-box;
 			line-height: 48px;
@@ -33,10 +38,11 @@
 		@media @tablet-media {
 			width: calc(100% / 3);
 			float: left;
-			padding: 36px;
+			padding: 36px 0;
 			margin: 0;
 			box-sizing: border-box;
 			line-height: 48px;
+			text-align: right;
 		}
 	}
 
@@ -44,7 +50,7 @@
 		@media @tablet-media {
 			width: calc(100% / 3);
 			float: left;
-			padding: 36px;
+			padding: 36px 0;
 			box-sizing: border-box;
 		}
 	}

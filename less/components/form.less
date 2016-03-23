@@ -1,15 +1,58 @@
 .form {
 	margin-bottom: 12px;
 
+	@media @tablet-media {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
 	> section {
 		border-top: 1px solid #e5e5e5;
 		padding: 20px 19px 24px;
+
+		@media @tablet-media {
+			order: 3;
+			box-sizing: border-box;
+			width: 100%;
+			border: none;
+			text-align: left;
+		}
 	}
 
 	&__title {
 		margin-top: 0;
 		margin-bottom: 22px;
 		font-size: 18px;
+
+		@media @tablet-media {
+			&--hide {
+				display: none;
+			}
+
+			&--bg-line{
+				text-align: center;
+				position: relative;
+				background-color: #fff;
+				padding-left: 150px;
+				padding-right: 150px;
+
+				&::before, &::after {
+					content: "";
+					position: absolute;
+					background-color: #dbdbdb;
+					height: 1px;
+					width: 125px;
+					top: 50%;
+					left: 0;
+				}
+
+				&::after {
+					right: 0;
+					left: auto;
+				}
+			}
+		}
 	}
 
 
@@ -38,6 +81,17 @@
 			margin-left: 17px;
 			box-sizing: border-box;
 			width: 100%;
+		}
+
+		@media @tablet-media {
+			.form & {
+				order: 2;
+				width: 50%;
+			}
+
+			.form__title {
+				text-align: left;
+			}
 		}
 	}
 
@@ -138,11 +192,27 @@
 				background-color: #333333;
 			}
 		}
+
+		@media @tablet-media {
+			.form & {
+				order: 1;
+				width: 50%;
+				border-right: 1px solid #dbdbdb;
+			}
+
+			.form__title {
+				text-align: left;
+			}
+		}
 	}
 
 
 	// Place Section
 	&__place {
+
+		@media @tablet-media {
+			font-size: 0;
+		}
 
 		&-wrap {
 			text-align: left;
@@ -150,6 +220,16 @@
 			&:not(:last-child) {
 				margin-bottom: 24px;
 			}
+				@media @tablet-media {
+					display: inline-block;
+					width:50%;
+					padding-left: 30px;
+					box-sizing: border-box;
+
+					&:nth-child(even) {
+						padding-left: 90px;
+					}
+				}
 		}
 
 		&-label {
@@ -203,6 +283,23 @@
 		margin-top: 45px;
 		font-size: 18px;
 		cursor: pointer;
+
+		@media @tablet-media {
+			width: 50%;
+			float: left;
+		}
+	}
+
+	&__text-requared {
+		display: none;
+
+		@media @tablet-media {
+			display: block;
+			width: 50%;
+			float: right;
+			text-align: right;
+			margin-top: 60px;
+		}
 	}
 }
 
