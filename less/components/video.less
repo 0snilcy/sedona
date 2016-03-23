@@ -12,6 +12,12 @@
 		width: 100%;
 		padding: 0 20px;
 		bottom: -@control-btns;
+
+		@media @tablet-media {
+			padding: 0;
+			position: absolute;
+			bottom: 0;
+		}
 	}
 
 	&__control-range {
@@ -41,12 +47,33 @@
 			background-color: #fff;
 			cursor: pointer;
 		}
+
+		@media @tablet-media {
+			height: 93px;
+
+			&::before {
+				top: 45px;
+				left: 93px;
+				right: 166px;
+			}
+
+			&::after {
+				top: 42px;
+				left: 206px;
+			}
+		}
+
 	}
 
 	&__control-buttons {
 		height: @control-btns;
 		background-color: #f2f2f2;
 		position: relative;
+
+		@media @tablet-media {
+			height: 0;
+			position: static;
+		}
 	}
 
 	&__control-btn {
@@ -54,35 +81,32 @@
 		position: absolute;
 		border: none;
 		cursor: pointer;
+		background: none;
 
 		&--replay {
-			height: 20px;
-			width: 16px;
 			left: 25px;
 			top: 50%;
 			transform: translateY(-50%);
-			background: url(../img/icon-video-replay.svg) no-repeat center center transparent;
-			background-size: 100%;
 		}
 
 		&--subtitles {
-			height: 20px;
-			width: 32px;
 			right: 74px;
 			top: 50%;
 			transform: translateY(-50%);
-			background: url(../img/icon-video-subtitles.svg) no-repeat center center transparent;
-			background-size: 100%;
 		}
 
 		&--full {
-			height: 20px;
-			width: 20px;
 			right: 23px;
 			top: 50%;
 			transform: translateY(-50%);
-			background: url(../img/icon-video-fullscreen.svg) no-repeat center center transparent;
-			background-size: 100%;
+		}
+
+		& svg {
+			fill: #5c6870;
+
+			@media @tablet-media {
+				fill: #fff;
+			}
 		}
 	}
 }
