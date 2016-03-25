@@ -5,6 +5,24 @@
 
 	.clearfix();
 
+	@media @desktop-media {
+		display: flex;
+
+		&__pick {
+			position: relative;
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		}
+	}
+
 	&__pick {
 		line-height: 0;
 
@@ -34,6 +52,10 @@
 			margin: 22px 8px 12px;
 			font-size: 21px;
 		}
+
+		@media @desktop-media {
+			margin: 4px 30px 11px;
+		}
 	}
 
 	&--mod {
@@ -50,10 +72,14 @@
 
 		@media @tablet-media {
 			width: calc(100% / 3);
-			float: right;
+			order: 3;
 			box-sizing: border-box;
 			margin: 0;
 			padding: 25px 40px 20px;
+		}
+
+		@media @desktop-media {
+			padding: 50px 70px 39px;
 		}
 
 		&--mod {
@@ -77,11 +103,15 @@
 
 			@media @tablet-media {
 				padding-top: 25px;
-				float: left;
+				order: 0;
 
 				&::before, &::after {
 					content: none;
 				}
+			}
+
+			@media @desktop-media {
+				padding-top: 50px;
 			}
 		}
 	}

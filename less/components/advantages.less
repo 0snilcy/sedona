@@ -10,6 +10,10 @@
 		padding: 50px 0;;
 	}
 
+	@media @desktop-media {
+		padding: 50px 0 70px;
+	}
+
 	&__item {
 		position: relative;
 		margin-left: 50px;
@@ -29,6 +33,10 @@
 				transform: translate(-50%, -100%);
 				width: 75px;
 				height: 75px;
+			}
+
+			@media @desktop-media {
+				top: -6px;
 			}
 		}
 
@@ -63,9 +71,17 @@
 		@media @tablet-media {
 			font-size: 21px;
 		}
+
+		@media @desktop-media {
+			margin-bottom: 27px;
+		}
 	}
 
 	&__desc {
 		line-height: 20px;
+
+		@media @desktop-media {
+			padding: 0 20px;
+		}
 	}
 }

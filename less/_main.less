@@ -23,8 +23,17 @@
 
 .placeholder(#000);
 
+html {
+	background-color: #f2f2f2;
+}
+
+button {
+	font: @font;
+	padding: 0;
+	line-height: 0;
+}
+
 body {
-	background-color: #fff;
 	min-width: @min-width;
 	width: @min-width;
 	margin: 0 auto;
@@ -32,9 +41,25 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	position: relative;
+	background-color: #fff;
 
 	@media @tablet-media {
 		width: @tablet-width;
+	}
+
+	@media @desktop-media {
+		width: @desktop-width;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+		z-index: -1;
 	}
 }
 
@@ -63,16 +88,34 @@ p {
 				font-size: 21px;
 			}
 		}
+
+		@media @desktop-media {
+			margin-bottom: 32px;
+		}
 	}
 
 	@media @tablet-media {
 		padding: 20px 100px 39px;
 	}
+
+	@media @desktop-media {
+		width: 445px;
+		margin: 0 auto;
+
+		&--index {
+			padding-bottom: 15px;
+		}
+	}
 }
 
 .main {
+
 	@media @tablet-media {
 		padding: 0 60px;
+	}
+
+	@media @desktop-media {
+		padding: 0;
 	}
 }
 

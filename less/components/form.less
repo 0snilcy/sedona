@@ -7,6 +7,10 @@
 		flex-wrap: wrap;
 	}
 
+	@media @desktop-media {
+		padding: 0 120px;
+	}
+
 	> section {
 		border-top: 1px solid #e5e5e5;
 		padding: 20px 19px 24px;
@@ -57,11 +61,29 @@
 				}
 			}
 		}
+
+		@media @desktop-media {
+
+			&--bg-line {
+				padding-left: 300px;
+				padding-right: 300px;
+			}
+
+			&::before, &::after {
+				width: 280px;
+			}
+
+			&--hide {
+				display: inline;
+			}
+
+		}
 	}
 
 
 	// Name Section
 	&__name {
+
 		&-wrap {
 			display: flex;
 
@@ -101,6 +123,15 @@
 				margin-bottom: 57px;
 			}
 		}
+
+		@media @desktop-media {
+			.form & {
+				order: 2;
+				width: 50%;
+				padding-left: 80px;
+				padding-top: 7px;
+			}
+		}
 	}
 
 
@@ -115,6 +146,13 @@
 		&-label {
 			display: block;
 			margin: 12px 22px 7px 22px;
+
+			@media @desktop-media {
+				white-space: nowrap;
+				line-height: 58px;
+				margin: 0;
+				margin-right: 20px;
+			}
 		}
 
 		&-input {
@@ -129,6 +167,12 @@
 			line-height: 58px;
 			padding: 0 22px;
 			padding-right: 58px;
+		}
+
+		&-hide {
+			@media @desktop-media {
+				display: none;
+			}
 		}
 
 		&-wrap {
@@ -171,10 +215,23 @@
 					right: 0;
 					top: -30px;
 				}
+
+				@media @desktop-media {
+					left: 0;
+				}
 			}
 
 			&--error::after {
 				display: block;
+			}
+		}
+
+		@media @desktop-media {
+			&-box {
+				width: 50%;
+				float: left;
+				display: flex;
+				margin-top: 48px;
 			}
 		}
 	}
@@ -182,6 +239,7 @@
 
 	// Impression Section
 	&__impression {
+
 		&-label {
 			line-height: 56px;
 			padding-left: 58px;
@@ -207,6 +265,14 @@
 
 				&::before {
 					left: 0;
+				}
+			}
+
+			@media @desktop-media {
+				padding-left: 80px;
+
+				&::before {
+					left: 4px;
 				}
 			}
 		}
@@ -240,6 +306,15 @@
 				margin-bottom: 59px;
 			}
 		}
+
+		@media @desktop-media {
+			padding-top: 0;
+
+			.form__title {
+				padding-left: 79px;
+				padding-top: 7px;
+			}
+		}
 	}
 
 
@@ -253,6 +328,10 @@
 
 		&-wrap {
 			text-align: left;
+
+			@media @desktop-media {
+				margin-top: 17px;
+			}
 
 			&:not(:last-child) {
 				margin-bottom: 24px;
@@ -272,6 +351,15 @@
 
 				&:nth-child(even) {
 					padding-left: 95px;
+				}
+			}
+
+			@media @desktop-media {
+				width: 25%;
+				padding: 0;
+
+				&:nth-child(even) {
+					padding: 0;
 				}
 			}
 		}
@@ -322,17 +410,22 @@
 		@media @tablet-media {
 			margin-top: 30px;
 		}
-
 	}
 
-	@media @tablet-media {
-		&__message {
+	&__message {
+
+		@media @tablet-media {
 			margin-top: 55px;
 			margin-bottom: 50px;
 
 			.clearfix();
 		}
+
+		@media @desktop-media {
+			margin-top: 68px;
+		}
 	}
+
 
 
 	// Btn

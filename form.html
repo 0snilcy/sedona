@@ -31,6 +31,9 @@
 			<a href="/" class="main-menu__logo">
 				<picture>
 					<source
+						media="(min-width: 1200px)"
+						srcset="img/logo-sedona-desktop.svg"/>
+					<source
 						media="(min-width: 768px)"
 						srcset="img/logo-sedona-tablet.svg"/>
 						<img src="img/logo-sedona-mobile.svg" alt="Logo" />
@@ -71,23 +74,29 @@
 
 			<section class="form__contacts">
 				<h2 class="form__title form__title--bg-line">Контактная информация:</h2>
-				<label class="form__contacts-label" for="input-phone">Контактный телефон:</label>
-				<div class="form__contacts-wrap form__contacts-wrap--phone" data-error="Ошибка, перепроверьте номер">
-					<input
-						class="form__contacts-input"
-						id="input-phone"
-						type="tel"
-						placeholder="Введите телефон"
-					/>
+
+				<div class="form__contacts-box">
+					<label class="form__contacts-label" for="input-phone"><span class="form__contacts-hide">Контактный </span>телефон:</label>
+					<div class="form__contacts-wrap form__contacts-wrap--phone" data-error="Ошибка, перепроверьте номер">
+						<input
+							class="form__contacts-input"
+							id="input-phone"
+							type="tel"
+							placeholder="Введите телефон"
+						/>
+					</div>
 				</div>
-				<label class="form__contacts-label" for="input-mail">Электронная почта:</label>
-				<div class="form__contacts-wrap form__contacts-wrap--mail" data-error="Ошибка, перепроверьте почту">
-					<input
-						class="form__contacts-input"
-						id="input-mail"
-						type="email"
-						placeholder="Введите e-mail"
-					/>
+
+				<div class="form__contacts-box">
+					<label class="form__contacts-label" for="input-mail">Электронная почта:</label>
+					<div class="form__contacts-wrap form__contacts-wrap--mail" data-error="Ошибка, перепроверьте почту">
+						<input
+							class="form__contacts-input"
+							id="input-mail"
+							type="email"
+							placeholder="Введите e-mail"
+						/>
+					</div>
 				</div>
 
 			</section>
