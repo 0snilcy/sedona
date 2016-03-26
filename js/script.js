@@ -76,7 +76,7 @@ function initMap() {
 		position: myLatLng,
 		map: map,
 		icon: iconMap,
-		title: 'Hello World!'
+		title: 'Sedona is here!'
 	});
 
 }

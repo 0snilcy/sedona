@@ -67,7 +67,6 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		background-color: @color-primary;
 		position: absolute;
 		width: 100%;
 		text-align: center;
@@ -96,9 +95,9 @@
 				border: none;
 				box-shadow: none;
 
-			&:nth-child(2) .main-menu__link {
-				margin-right: 20%;
-			}
+				&:nth-child(2) .main-menu__link {
+					margin-right: 20%;
+				}
 			}
 		}
 	}
@@ -110,13 +109,41 @@
 		line-height: 55px;
 		font-size: 18px;
 		display: block;
+		background-color: @color-primary;
+
+		.styleguide();
 
 		@media @tablet-media {
-			color: #000;
+			background-color: #fff;
 			font-size: 14px;
 			width: 20%;
 			float: left;
 			line-height: 56px;
+
+			color: #766357;
+
+			&:hover {
+				background-color: #fff;
+				color: #604e43;
+			}
+
+			&:focus, &:active {
+				color: #604e43;
+			}
+
+			&[href] {
+				color: #000;
+
+				&:hover {
+					background-color: #fff;
+					color: @color-primary;
+				}
+
+				&:focus, &:active {
+					color: rgba(0, 0, 0, .3);
+					background-color: #fff;
+				}
+			}
 		}
 	}
 
@@ -190,7 +217,7 @@
 		z-index: 3;
 		height: 26px;
 		width: 100%;
-		bottom: 0px;
+		bottom: -1px;
 		background: url(../img/bg-intro-triangle-mobile.svg) bottom center no-repeat transparent;
 
 		@media @tablet-media {

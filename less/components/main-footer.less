@@ -38,9 +38,22 @@
 		text-decoration: none;
 		color: #000;
 
-		img {
+		svg {
+			fill: #000;
 			margin-left: 10px;
 			vertical-align: middle;
+		}
+
+		&:hover {
+			svg {
+				fill: @color-primary;
+			}
+		}
+
+		&:focus, &:active {
+			svg {
+				fill: rgba(0, 0, 0, .3);
+			}
 		}
 
 		@media @tablet-media {
@@ -77,21 +90,39 @@
 	width: 46px;
 	height: 48px;
 	background-color: @color-primary;
+	position: relative;
 
-	&--twitter {
-		background: url(../img/icon-twitter.svg) center center no-repeat @color-primary;
-		background-size: 18px;
+	.styleguide();
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		fill: #fff;
 	}
 
-	&--youtube {
-		background: url(../img/icon-youtube.svg) center center no-repeat @color-primary;
-		background-size: 20px;
+	&:focus {
+		svg {
+			fill: @color-text-focus;
+		}
 	}
 
-	&--facebook {
-		background: url(../img/icon-facebook.svg) center center no-repeat @color-primary;
-		background-size: 9px;
-	}
+
+	// &--twitter {
+	// 	background: url(../img/icon-twitter.svg) center center no-repeat @color-primary;
+	// 	background-size: 18px;
+	// }
+
+	// &--youtube {
+	// 	background: url(../img/icon-youtube.svg) center center no-repeat @color-primary;
+	// 	background-size: 20px;
+	// }
+
+	// &--facebook {
+	// 	background: url(../img/icon-facebook.svg) center center no-repeat @color-primary;
+	// 	background-size: 9px;
+	// }
 
 	&:not(:last-child) {
 		margin-right: 6px;

@@ -29,3 +29,14 @@
 	}
 }
 
+.styleguide() {
+	&:hover {
+		background-color: @color-primary-hvr;
+	}
+
+	&:focus,
+	&:active {
+		background-color: @color-primary-fcs;
+		color: @color-text-focus;
+	}
+}

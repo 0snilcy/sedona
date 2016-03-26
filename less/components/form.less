@@ -191,8 +191,8 @@
 				position: absolute;
 				right: 0;
 				top: 0;
-				width: 58px;
-				height: 58px;
+				width: 64px;
+				height: 64px;
 			}
 
 			&.form__contacts-wrap--phone::before {
@@ -258,6 +258,21 @@
 				background-color: #f2f2f2;
 				border-radius: 50%;
 				left: -19px;
+			}
+
+			&:hover {
+				&::before {
+					border-color: #e5e5e5;
+					background-color: #e5e5e5;
+				}
+			}
+
+			&:focus, &:active {
+				&::before {
+					border-color: #d5d5d5;
+					background-color: #d5d5d5;
+					// background-color: #a4a4a4;
+				}
 			}
 
 			@media @tablet-media {
@@ -382,14 +397,36 @@
 				border-radius: 3px;
 				left: 0;
 			}
+
+			&:hover::before {
+				background-color: #e5e5e5;
+			}
+
+			&:focus,
+			&:active {
+				&::before {
+					background-color: #d5d5d5;
+				}
+
+				&::after {
+					opacity: .3;
+				}
+			}
 		}
 
 		&-input {
 			display: none;
 
-			&:checked ~ label::before {
-				background: url(../img/icon-tick.svg) center center no-repeat #f2f2f2;
-				background-size: 50%;
+			&:checked ~ label::after {
+				content: "";
+				position: absolute;
+				width: 17px;
+				height: 10px;
+				border-left: 4px solid #333333;
+				border-bottom: 4px solid #333333;
+				left: 18px;
+				top: 3px;
+				transform: rotate(-45deg);
 			}
 		}
 	}
@@ -451,6 +488,24 @@
 			float: right;
 			text-align: right;
 			margin-top: 73px;
+		}
+	}
+
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"] {
+		border: 4px solid #f2f2f2;
+
+		&:hover {
+			background-color: #e5e5e5;
+			border: 4px solid #e5e5e5;
+		}
+
+		&:focus,
+		&:active {
+			background-color: transparent;
+			border: 4px solid #e5e5e5;
+			outline: none;
 		}
 	}
 }
