@@ -182,10 +182,25 @@
 		}
 	}
 
+	@media (min-resolution: 1.5dppx) {
+		background: url(../img/bg-back-mobile@2x.jpg) no-repeat center top transparent;
+		background-size: auto 100%;
+
+		&::before {
+			bottom: -1px;
+		}
+	}
+
 	@media @tablet-media {
 		min-height: 520px;
 		margin-bottom: 10px;
 		background: url(../img/bg-back-desktop.jpg) no-repeat center top transparent;
+
+		@media (min-resolution: 1.5dppx) {
+			background: url(../img/bg-back-desktop@2x.jpg) no-repeat center top transparent;
+			background-size: auto 100%;
+		}
+
 	}
 
 	&__pick {

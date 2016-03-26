@@ -7,12 +7,10 @@
 		border: none;
 		padding: 0;
 		width: 50%;
-		float: left;
 		background-color: #f2f2f2;
 
 		&--main {
 			width: 100%;
-			float: none;
 		}
 	}
 
@@ -59,9 +57,7 @@
 		border: none;
 		background-color: transparent;
 		font-weight: bold;
-		position: relative;
 		cursor: pointer;
-		margin-top: 7px;
 		line-height: 20px;
 
 		svg {
@@ -71,15 +67,17 @@
 		}
 
 		@media @tablet-media {
-			position: absolute;
-			right: 30px;
-			top: 50%;
-			transform: translateY(-50%);
-			margin-top: 0;
-			font-size: 14px;
+			&:hover {
+				svg {
+					fill: @color-primary;
+				}
+			}
 
-			.post--main & {
-				right: 15px;
+			&:focus {
+				svg {
+					fill: @color-primary-fcs;
+				}
+				outline: none;
 			}
 		}
 
@@ -97,6 +95,16 @@
 	}
 
 	&__info {
+
+		@media @tablet-media {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+
+		&-wrap {
+			flex-grow: 1;
+		}
+
 		@media @tablet-media {
 			padding: 16px 20px;
 			position: relative;
@@ -121,6 +129,8 @@
 	}
 
 	&-wrap {
-		.clearfix();
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 }

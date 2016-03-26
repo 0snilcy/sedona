@@ -121,16 +121,22 @@
 					<picture>
 						<source
 							media="(min-width: 1200px)"
-							srcset="img/photo-1-desktop.jpg"/>
+							srcset="img/photo-1-desktop.jpg ,img/photo-1-desktop@2x.jpg 2x"/>
 						<source
 							media="(min-width: 768px)"
-							srcset="img/photo-1-tablet.jpg"/>
-						<img src="img/photo-1-mobile.jpg" alt="Post pick" class="post__pick"/>
+							srcset="img/photo-1-tablet.jpg, img/photo-1-tablet@2x.jpg 2x"/>
+						<img
+							srcset="img/photo-1-mobile@2x.jpg 2x"
+							src="img/photo-1-mobile.jpg"
+							alt="Post pick"
+							class="post__pick"/>
 					</picture>
 				</a>
 				<div class="post__info">
-					<h2 class="post__title">Неродные просторы</h2>
-					<div class="post__author">Автор фото: Борис</div>
+					<div class="post__info-wrap">
+						<h2 class="post__title">Неродные просторы</h2>
+						<div class="post__author">Автор фото: Борис</div>
+					</div>
 					<button class="post__like" type="button">
 						<svg width="22" height="21">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-like"></use>
@@ -145,16 +151,23 @@
 					<picture>
 						<source
 							media="(min-width: 1200px)"
-							srcset="img/photo-2-desktop.jpg"/>
+							srcset="img/photo-2-desktop.jpg ,img/photo-2-desktop@2x.jpg 2x" />
 						<source
 							media="(min-width: 768px)"
-							srcset="img/photo-2-tablet.jpg"/>
-						<img src="img/photo-2-mobile.jpg" alt="Post pick" class="post__pick"/>
+							srcset="img/photo-2-tablet.jpg, img/photo-2-tablet@2x.jpg 2x"/>
+						<img
+							src="img/photo-2-mobile.jpg"
+							srcset="img/photo-2-mobile@2x.jpg 2x"
+							sizes="50%"
+							alt="Post pick"
+							class="post__pick"/>
 					</picture>
 				</a>
 				<div class="post__info">
-					<h2 class="post__title">Неродные просторы</h2>
-					<div class="post__author">Автор фото: Сергей</div>
+					<div class="post__info-wrap">
+						<h2 class="post__title">Неродные просторы</h2>
+						<div class="post__author">Автор фото: Борис</div>
+					</div>
 					<button class="post__like" type="button">
 						<svg width="22" height="21">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-like"></use>
@@ -169,16 +182,18 @@
 					<picture>
 						<source
 							media="(min-width: 1200px)"
-							srcset="img/photo-3-desktop.jpg"/>
+							srcset="img/photo-3-desktop.jpg ,img/photo-3-desktop@2x.jpg 2x" />
 						<source
 							media="(min-width: 768px)"
-							srcset="img/photo-3-tablet.jpg"/>
-						<img src="img/photo-3-mobile.jpg" alt="Post pick" class="post__pick"/>
+							srcset="img/photo-3-tablet.jpg, img/photo-3-tablet@2x.jpg 2x"/>
+						<img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Post pick" class="post__pick"/>
 					</picture>
 				</a>
 				<div class="post__info">
-					<h2 class="post__title">Неродные просторы</h2>
-					<div class="post__author">Автор фото: Петр</div>
+					<div class="post__info-wrap">
+						<h2 class="post__title">Неродные просторы</h2>
+						<div class="post__author">Автор фото: Борис</div>
+					</div>
 					<button class="post__like" type="button">
 						<svg width="22" height="21">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-like"></use>
@@ -193,16 +208,18 @@
 					<picture>
 						<source
 							media="(min-width: 1200px)"
-							srcset="img/photo-4-desktop.jpg"/>
+							srcset="img/photo-4-desktop.jpg ,img/photo-4-desktop@2x.jpg 2x" />
 						<source
 							media="(min-width: 768px)"
-							srcset="img/photo-4-tablet.jpg"/>
-						<img src="img/photo-4-mobile.jpg" alt="Post pick" class="post__pick"/>
+							srcset="img/photo-4-tablet.jpg, img/photo-4-tablet@2x.jpg 2x"/>
+						<img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Post pick" class="post__pick"/>
 					</picture>
 				</a>
 				<div class="post__info">
-					<h2 class="post__title">Неродные просторы</h2>
-					<div class="post__author">Автор фото: Антон</div>
+					<div class="post__info-wrap">
+						<h2 class="post__title">Неродные просторы</h2>
+						<div class="post__author">Автор фото: Борис</div>
+					</div>
 					<button class="post__like" type="button">
 						<svg width="22" height="21">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-like"></use>
@@ -230,23 +247,21 @@
 
 				<div class="video__control">
 					<div class="video__control-range"></div>
-					<div class="video__control-buttons">
-						<button type="button" class="video__control-btn video__control-btn--replay">
-							<svg width="16" height="20" class="video__control-svg">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-replay"></use>
-							</svg>
-						</button>
-						<button type="button" class="video__control-btn video__control-btn--subtitles">
-							<svg width="32" height="20" class="video__control-svg">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-subtitles"></use>
-							</svg>
-						</button>
-						<button type="button" class="video__control-btn video__control-btn--full">
-							<svg width="20" height="20" class="video__control-svg">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-fullscreen"></use>
-							</svg>
-						</button>
-					</div>
+					<button type="button" class="video__control-btn video__control-btn--replay">
+						<svg width="16" height="20" class="video__control-svg">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-replay"></use>
+						</svg>
+					</button>
+					<button type="button" class="video__control-btn video__control-btn--subtitles">
+						<svg width="32" height="20" class="video__control-svg">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-subtitles"></use>
+						</svg>
+					</button>
+					<button type="button" class="video__control-btn video__control-btn--full">
+						<svg width="20" height="20" class="video__control-svg">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-fullscreen"></use>
+						</svg>
+					</button>
 				</div>
 			</div>
 		</section>

@@ -18,21 +18,31 @@
 	&__control {
 		position: absolute;
 		box-sizing: border-box;
-		width: 100%;
-		padding: 0 20px;
-		bottom: -@control-btns;
+		left: 20px;
+		right: 20px;
+		bottom: -66px;
+		height: 66px;
+		background-color: #f2f2f2;
+
+		display: flex;
+		align-items: center;
 
 		@media @tablet-media {
-			padding: 0;
-			position: absolute;
+			background-color: rgba(0, 0, 0, .6);
 			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 93px;
 		}
 	}
 
 	&__control-range {
-		height: @control-range;
+		width: 235px;
+		height: 3px;
+		padding: 22px;
 		background-color: rgba(0, 0, 0, .6);
-		position: relative;
+		position: absolute;
+		bottom: 66px;
 
 		&::before {
 			content: "";
@@ -58,79 +68,65 @@
 		}
 
 		@media @tablet-media {
-			height: 93px;
+			order: 2;
+			width: auto;
+			position: relative;
+			bottom: auto;
+			left: auto;
+			right: auto;
+			flex-grow: 1;
+			background-color: transparent;
+			padding: 0;
+			background-color: rgba(255, 255, 255, 0.2);
 
 			&::before {
-				top: 45px;
-				left: 93px;
-				right: 166px;
+				content: none;
 			}
 
 			&::after {
-				top: 42px;
-				left: 206px;
+				left: 113px;
+				top: -3px;
 			}
 		}
 
-	}
-
-	&__control-buttons {
-		height: @control-btns;
-		background-color: #f2f2f2;
-		position: relative;
-
-		@media @tablet-media {
-			height: 0;
-			position: static;
-		}
 	}
 
 	&__control-btn {
 		font-size: 0;
-		position: absolute;
 		border: none;
 		cursor: pointer;
 		background: none;
 
 		&--replay {
-			left: 25px;
-			top: 50%;
-			transform: translateY(-50%);
+			flex-grow: 1;
+			text-align: left;
+			margin-left: 25px;
 
 			@media @tablet-media {
-				left: 29px;
-			}
-
-			@media @desktop-media {
-				left: 34px;
+				flex-grow: 0;
+				text-align: center;
+				order: 1;
+				margin-left: 35px;
+				margin-right: 42px;
 			}
 		}
 
 		&--subtitles {
-			right: 74px;
-			top: 50%;
-			transform: translateY(-50%);
+			margin-right: 31px;
 
 			@media @tablet-media {
-				right: 86px;
-			}
-
-			@media @desktop-media {
-				right: 94px;
+				order: 3;
+				margin-right: 31px;
+				margin-left: 42px;
 			}
 		}
 
 		&--full {
-			right: 23px;
-			top: 50%;
-			transform: translateY(-50%);
+			margin-right: 23px;
 
 			@media @tablet-media {
-				right: 35px;
-			}
-
-			@media @desktop-media {
-				right: 43px;
+				order: 3;
+				margin-right: 41px;
 			}
 		}
 
