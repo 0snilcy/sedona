@@ -16,6 +16,12 @@ btn.addEventListener("click", function(event) {
 	}
 });
 
+onload = function() {
+	menu.classList.add("main-menu__list--opened");
+	btn.classList.add("main-menu__button--opened");
+};
+
+
 
 // Form
 
