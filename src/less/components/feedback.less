@@ -36,7 +36,9 @@ margin: 30px 20px;
 
 .map {
 	height: 350px;
-	background: url(../img/bg-map-mobile.jpg) no-repeat top center #f3f1ed;
+	background:
+		url(../img/icon-map-marker.svg) no-repeat center,
+		url(../img/bg-map-mobile.jpg) no-repeat top center #f3f1ed;
 
 	&__iframe {
 		height: 350px;
@@ -44,10 +46,14 @@ margin: 30px 20px;
 	}
 
 	@media @tablet-media {
-		background: url(../img/bg-map-tablet.jpg) no-repeat top center #f3f1ed;
+		background:
+		url(../img/icon-map-marker.svg) no-repeat center,
+		url(../img/bg-map-tablet.jpg) no-repeat top center #f3f1ed;
 	}
 
 	@media @desktop-media {
-		background: url(../img/bg-map-desktop.jpg) no-repeat top center #f3f1ed;
+		background:
+		url(../img/icon-map-marker.svg) no-repeat center,
+		url(../img/bg-map-desktop.jpg) no-repeat top center #f3f1ed;
 	}
 }

@@ -12,10 +12,16 @@ module.exports = function(grunt) {
 				src: [
 					"fonts/**/*.{woff,woff2}",
 					"img/*.{jpg,png,svg,gif}",
-					"js/**",
+					"js/*.js",
 					"*.html"
 				],
 				dest: "build",
+			},
+			js: {
+				expand: true,
+				cwd: "src/js/",
+				src: "*.js",
+				dest: "build/js",
 			},
 			img: {
 				expand: true,
@@ -32,13 +38,22 @@ module.exports = function(grunt) {
 		},
 
 		clean: {
-			build: ["build"]
+			build: ["build"],
+			js: ["build/js/"]
 		},
 
 		less: {
 			style: {
 				files: {
 					"build/css/style.css": "src/less/style.less"
+				}
+			}
+		},
+
+		uglify: {
+			start: {
+				files: {
+					"build/js/script.min.js": ["build/js/*.js"]
 				}
 			}
 		},
@@ -108,7 +123,7 @@ module.exports = function(grunt) {
 				options: {
 					server: "build",
 					watchTask: true,
-					notify: false,
+					notify: true,
 					open: true,
 					ui: false
 				}
@@ -125,13 +140,26 @@ module.exports = function(grunt) {
 				files: ["src/*.html"],
 				tasks: ["copy:html"],
 				options: {spawn: false}
+			},
+			js: {
+				files: ["src/js/*.js"],
+				tasks: ["js"],
+				opitons: {spawn: false}
 			}
+		},
+
+		"gh-pages": {
+			options: {
+				base: "build"
+			},
+			src: ["**"]
 		}
 	});
 
 	grunt.registerTask("build", [
-		"clean",
+		"clean:build",
 		"copy:build",
+		"uglify",
 		"svgstore",
 		"imagemin",
 		"less",
@@ -142,6 +170,22 @@ module.exports = function(grunt) {
 	grunt.registerTask("serve", [
 		"browserSync",
 		"watch"
+	]);
+
+	grunt.registerTask("start", [
+		"build",
+		"serve"
+	]);
+
+	grunt.registerTask("publish", [
+		"build",
+		"gh-pages"
+	]);
+
+	grunt.registerTask("js", [
+		"clean:js",
+		"copy:js",
+		"uglify"
 	]);
 
 };

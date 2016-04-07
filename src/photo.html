@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Sedona | Index</title>
+
+	<script>
+		document.getElementsByTagName('html')[0].className = 'js';
+	</script>
+
 	<link rel="stylesheet" href="css/style.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -76,13 +81,13 @@
 			</button>
 			<ul class="main-menu__list">
 				<li class="main-menu__item">
-					<a class="main-menu__link" href="/">Главная</a>
+					<a class="main-menu__link" href="index.html">Главная</a>
 				</li>
 				<li class="main-menu__item">
 					<a class="main-menu__link">Фото и видео</a>
 				</li>
 				<li class="main-menu__item">
-					<a class="main-menu__link" href="/form.html">Форма отзыва</a>
+					<a class="main-menu__link" href="form.html">Форма отзыва</a>
 				</li>
 				<li class="main-menu__item">
 					<a class="main-menu__link" href="#">HTML Academy</a>
@@ -121,10 +126,10 @@
 					<picture>
 						<source
 							media="(min-width: 1200px)"
-							srcset="img/photo-1-desktop.jpg ,img/photo-1-desktop@2x.jpg 2x"/>
+							srcset="img/photo-1-desktop.jpg 1x,img/photo-1-desktop@2x.jpg 2x"/>
 						<source
 							media="(min-width: 768px)"
-							srcset="img/photo-1-tablet.jpg, img/photo-1-tablet@2x.jpg 2x"/>
+							srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x"/>
 						<img
 							srcset="img/photo-1-mobile@2x.jpg 2x"
 							src="img/photo-1-mobile.jpg"
@@ -151,10 +156,10 @@
 					<picture>
 						<source
 							media="(min-width: 1200px)"
-							srcset="img/photo-2-desktop.jpg ,img/photo-2-desktop@2x.jpg 2x" />
+							srcset="img/photo-2-desktop.jpg 1x,img/photo-2-desktop@2x.jpg 2x" />
 						<source
 							media="(min-width: 768px)"
-							srcset="img/photo-2-tablet.jpg, img/photo-2-tablet@2x.jpg 2x"/>
+							srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x"/>
 						<img
 							src="img/photo-2-mobile.jpg"
 							srcset="img/photo-2-mobile@2x.jpg 2x"
@@ -182,10 +187,10 @@
 					<picture>
 						<source
 							media="(min-width: 1200px)"
-							srcset="img/photo-3-desktop.jpg ,img/photo-3-desktop@2x.jpg 2x" />
+							srcset="img/photo-3-desktop.jpg 1x,img/photo-3-desktop@2x.jpg 2x" />
 						<source
 							media="(min-width: 768px)"
-							srcset="img/photo-3-tablet.jpg, img/photo-3-tablet@2x.jpg 2x"/>
+							srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x"/>
 						<img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Post pick" class="post__pick"/>
 					</picture>
 				</a>
@@ -296,7 +301,7 @@
 		</a>
 	</footer>
 
-	<script src="js/script.js"></script>
+	<script src="js/script.min.js"></script>
 
 </body>
 </html>
