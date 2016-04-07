@@ -16,11 +16,6 @@ btn.addEventListener("click", function(event) {
 	}
 });
 
-onload = function() {
-	menu.classList.add("main-menu__list--opened");
-	btn.classList.add("main-menu__button--opened");
-};
-
 
 
 // Form
@@ -29,6 +24,7 @@ var form = document.querySelector(".form");
 var input = form.querySelectorAll("input.form__contacts-input");
 
 form.addEventListener("submit", function(event) {
+	event.preventDefault();
 	var count = 0;
 	for(var i = 0; i < input.length; i++ ){
 		if(!input[i].value){
@@ -39,6 +35,8 @@ form.addEventListener("submit", function(event) {
 	}
 	if (count == "0") {
 		popupGood.classList.remove("popup--closed");
+	} else {
+		popupBad.classList.remove("popup--closed");
 	}
 });
 
@@ -84,5 +82,4 @@ function initMap() {
 		icon: iconMap,
 		title: 'Sedona is here!'
 	});
-
 }

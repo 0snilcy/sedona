@@ -100,6 +100,13 @@ p {
 .clearfix:after {
   clear: both;
 }
+.no-js .main-menu__list {
+  display: block;
+  position: relative;
+}
+.no-js .main-menu__button {
+  display: none;
+}
 .main-menu {
   position: relative;
   min-height: 56px;
@@ -380,7 +387,7 @@ p {
 }
 .map {
   height: 350px;
-  background: url(../img/bg-map-mobile.jpg) no-repeat top center #f3f1ed;
+  background: url(../img/icon-map-marker.svg) no-repeat center, url(../img/bg-map-mobile.jpg) no-repeat top center #f3f1ed;
 }
 .map__iframe {
   height: 350px;
@@ -675,12 +682,14 @@ p {
 }
 .popup {
   position: fixed;
+  z-index: 9999;
   background-color: #fff;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 320px;
   box-sizing: border-box;
-  box-shadow: 0 7px 15px -3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
 }
 .popup--closed {
   display: none;
@@ -995,7 +1004,7 @@ p {
     margin-bottom: 58px;
   }
   .map {
-    background: url(../img/bg-map-tablet.jpg) no-repeat top center #f3f1ed;
+    background: url(../img/icon-map-marker.svg) no-repeat center, url(../img/bg-map-tablet.jpg) no-repeat top center #f3f1ed;
   }
   .main-footer {
     padding: 0 60px;
@@ -1152,6 +1161,33 @@ p {
     float: right;
     text-align: right;
     margin-top: 73px;
+  }
+  .popup__title {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+  .popup--good {
+    width: 640px;
+  }
+  .popup--good .popup__wrap {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .popup--good .popup__btn-wrap--bad {
+    padding: 45px 100px;
+  }
+  .popup--bad {
+    width: 400px;
+  }
+  .popup--bad .popup__wrap {
+    margin: 50px 60px 30px 60px;
+  }
+  .popup--bad .popup__btn-wrap {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  .popup--bad .popup__btn {
+    width: 100%;
   }
   .post {
     border: none;
@@ -1354,7 +1390,7 @@ p {
     margin-bottom: 66px;
   }
   .map {
-    background: url(../img/bg-map-desktop.jpg) no-repeat top center #f3f1ed;
+    background: url(../img/icon-map-marker.svg) no-repeat center, url(../img/bg-map-desktop.jpg) no-repeat top center #f3f1ed;
   }
   .main-footer {
     padding: 0;
