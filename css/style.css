@@ -476,7 +476,7 @@ p {
   margin-bottom: 20px;
 }
 .form__name-label {
-  line-height: 58px;
+  padding: 21px 0;
 }
 .form__name-input {
   background-color: #f2f2f2;
@@ -484,8 +484,7 @@ p {
   font-weight: bold;
   color: #000;
   font-size: 18px;
-  line-height: 58px;
-  padding: 0 22px;
+  padding: 18px;
   margin-left: 17px;
   box-sizing: border-box;
   width: 100%;
@@ -506,9 +505,7 @@ p {
   font-weight: bold;
   color: #000;
   font-size: 18px;
-  line-height: 58px;
-  padding: 0 22px;
-  padding-right: 58px;
+  padding: 18px 64px 18px 22px;
 }
 .form__contacts-wrap {
   position: relative;
@@ -640,6 +637,7 @@ p {
   transform: rotate(-45deg);
 }
 .form__feedback {
+  font: 14px/24px "PT Sans", Tahoma, sans-serif;
   resize: vertical;
   width: 100%;
   background-color: #f2f2f2;
@@ -1423,7 +1421,7 @@ p {
   }
   .form__contacts-label {
     white-space: nowrap;
-    line-height: 58px;
+    padding: 22px 0;
     margin: 0;
     margin-right: 20px;
   }

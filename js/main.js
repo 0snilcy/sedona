@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", function(){
+
+	// Map
+
+	var mapElement = document.getElementById('map');
+	if (mapElement && google) {
+		var centerLatLng = new google.maps.LatLng(34.871276, -111.761493);
+		var mapOptions = {
+			zoom: 7,
+			center: centerLatLng,
+			scrollwheel: false,
+			disableDefaultUI: true
+		};
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		var image = "../img/icon-map-marker.svg";
+		var marker = new google.maps.Marker({
+			position: centerLatLng,
+			map: map,
+			icon: image,
+			title: 'Sedona is here!'
+		});
+	}
+
+
+
+
 	// Navigation
 
 	var btn = document.querySelector(".main-menu__button");
@@ -50,18 +75,17 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	// Popup
 
-	var popup     = document.querySelectorAll(".popup");
+	var popup	 = document.querySelectorAll(".popup");
 	var popupBtn  = document.querySelectorAll(".popup__btn");
 	var popupBad  = document.querySelector("#popopBad");
 	var popupGood = document.querySelector("#popopGood");
 
-	for (var i = 0; i < popupBtn.length; i++) {
-		popupBtn[i].addEventListener("click", function(event){
-			for (var i = 0; i < popup.length; i++) {
+	for (var x = 0; x < popupBtn.length; x++) {
+		popupBtn[x].addEventListener("click", function(event){
+			for (var x = 0; x < popup.length; x++) {
 				event.preventDefault();
-				popup[i].classList.add("popup--closed");
+				popup[x].classList.add("popup--closed");
 			}
 		});
 	}
-
 });
